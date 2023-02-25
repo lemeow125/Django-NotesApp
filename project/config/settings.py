@@ -131,3 +131,14 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:8000",
 ]
+
+DJOSER = {
+    'SEND_ACTIVATION_EMAIL': True,
+    'SEND_CONFIRMATION_EMAIL': True,
+    'ACTIVATION_URL': 'activation/{uid}/{token}',
+}
+
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = '54ff6949e39105'
+EMAIL_HOST_PASSWORD = 'c59d3eaa05f98d'
+EMAIL_PORT = '2525'
