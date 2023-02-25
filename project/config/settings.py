@@ -135,7 +135,7 @@ CORS_ALLOWED_ORIGINS = [
 DJOSER = {
     'SEND_ACTIVATION_EMAIL': True,
     'SEND_CONFIRMATION_EMAIL': True,
-    'ACTIVATION_URL': 'activation/{uid}/{token}',
+    'ACTIVATION_URL': 'api/v1/accounts/users/activation/{uid}/{token}',
 }
 
 EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
