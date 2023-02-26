@@ -139,10 +139,13 @@ REST_FRAMEWORK = {
     ),
 }
 
+DOMAIN = 'localhost:3000'
+SITE_NAME = 'localhost:3000'
+
 DJOSER = {
     'SEND_ACTIVATION_EMAIL': True,
     'SEND_CONFIRMATION_EMAIL': True,
-    'ACTIVATION_URL': 'api/v1/accounts/users/activation/{uid}/{token}',
+    'ACTIVATION_URL': 'activation/{uid}/{token}',
 }
 
 EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
