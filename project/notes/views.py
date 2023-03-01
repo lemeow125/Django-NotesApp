@@ -13,3 +13,6 @@ class NoteViewSet(viewsets.ModelViewSet):
         user = self.request.user
         queryset = Note.objects.filter(owner=user).order_by('date_created')
         return queryset
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)

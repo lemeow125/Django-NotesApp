@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'notes.apps.NotesConfig',
     'corsheaders',
-    'djoser'
+    'djoser',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -146,6 +147,9 @@ DJOSER = {
     'SEND_ACTIVATION_EMAIL': True,
     'SEND_CONFIRMATION_EMAIL': True,
     'ACTIVATION_URL': 'activation/{uid}/{token}',
+    'SERIALIZERS': {
+        'user': 'accounts.serializers.CustomUserSerializer'
+    },
 }
 
 EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
