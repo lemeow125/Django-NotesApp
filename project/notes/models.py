@@ -7,7 +7,7 @@ User = get_user_model()
 
 class Note(models.Model):
     title = models.CharField(max_length=20)
-    content = models.CharField(max_length=1024)
+    content = models.TextField()
     date_created = models.DateTimeField(default=now, editable=False)
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
 
