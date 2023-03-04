@@ -10,6 +10,7 @@ djoser = "*"
 djangorestframework-simplejwt = "*"
 django-cors-headers = "*"
 python-decouple = "*"
+pytz = "*"
 
 [dev-packages]
 autopep8 = "*"
