@@ -13,6 +13,7 @@ python-decouple = "*"
 pytz = "*"
 python-dotenv = "*"
 whitenoise = "*"
+django-simple-history = "*"
 
 [dev-packages]
 autopep8 = "*"
