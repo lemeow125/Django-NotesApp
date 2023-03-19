@@ -126,16 +126,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://localhost:8000",
-]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -143,8 +140,12 @@ REST_FRAMEWORK = {
     ),
 }
 
-DOMAIN = 'localhost:3000'
-SITE_NAME = 'localhost:3000'
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
+
+DOMAIN = 'lemeow125.github.io/Notes/#'
+SITE_NAME = 'lemeow125.github.io/Notes/#'
+
 
 DJOSER = {
     'SEND_ACTIVATION_EMAIL': True,
@@ -155,7 +156,11 @@ DJOSER = {
     },
 }
 
-EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
-EMAIL_HOST_USER = '54ff6949e39105'
-EMAIL_HOST_PASSWORD = 'c59d3eaa05f98d'
-EMAIL_PORT = '2525'
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True
