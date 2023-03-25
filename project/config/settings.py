@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['lemeow125.github.io', 'keannu126.pythonanywhere.com']
 
@@ -144,8 +144,8 @@ REST_FRAMEWORK = {
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 
-DOMAIN = 'lemeow125.github.io/react-notes/#'
-SITE_NAME = 'lemeow125.github.io/react-notes/#'
+DOMAIN = 'lemeow125.github.io/React-NotesApp/#'
+SITE_NAME = 'lemeow125.github.io/React-NotesApp/#'
 
 
 DJOSER = {
