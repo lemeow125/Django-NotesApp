@@ -144,8 +144,8 @@ REST_FRAMEWORK = {
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 
-DOMAIN = 'lemeow125.github.io/Notes/#'
-SITE_NAME = 'lemeow125.github.io/Notes/#'
+DOMAIN = 'lemeow125.github.io/react-notes/#'
+SITE_NAME = 'lemeow125.github.io/react-notes/#'
 
 
 DJOSER = {
