@@ -9,5 +9,5 @@ router.register(r'notes', views.NoteViewSet)
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
     path('', include(router.urls)),
-
+    path('public_notes/', views.PublicNoteViewSet.as_view())
 ]
