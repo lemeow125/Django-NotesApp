@@ -5,7 +5,7 @@ from .models import Note
 
 
 class NoteViewSet(viewsets.ModelViewSet):
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     serializer_class = NoteSerializer
     queryset = Note.objects.all()
 
@@ -19,6 +19,5 @@ class NoteViewSet(viewsets.ModelViewSet):
 
 
 class PublicNoteViewSet(generics.ListAPIView):
-    # permission_classes = [IsAuthenticated]
     serializer_class = NoteSerializer
     queryset = Note.objects.filter(public=True)
