@@ -28,7 +28,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['lemeow125.github.io', 'keannu126.pythonanywhere.com']
+ALLOWED_HOSTS = ['lemeow125.github.io',
+                 'keannu126.pythonanywhere.com', '127.0.0.1', 'localhost']
 
 
 # Application definition

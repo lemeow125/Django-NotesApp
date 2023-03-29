@@ -9,5 +9,5 @@ class NoteSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Note
-        fields = ('id', 'title', 'content', 'date_created', 'owner')
+        fields = ('id', 'title', 'content', 'date_created', 'owner', 'public')
         read_only_fields = ('id', 'date_created', 'owner')
