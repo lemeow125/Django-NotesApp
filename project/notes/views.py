@@ -2,10 +2,11 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework import viewsets, generics
 from .serializers import NoteSerializer
 from .models import Note
+from permissions.permissions import IsOwner
 
 
 class NoteViewSet(viewsets.ModelViewSet):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsOwner]
     serializer_class = NoteSerializer
     queryset = Note.objects.all()
 
